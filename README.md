@@ -1,0 +1,1 @@
+Welcome to my personal repository for the FNB App Academy – a training program focused on teaching the fundamentals of app development. This repo will serve as a central space for all the projects, exercises, and assignments I complete during the course.
