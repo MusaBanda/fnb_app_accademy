@@ -1,0 +1,27 @@
+h1, h2, h3, h4{
+color: rgb(98, 0, 128);
+font-family: 'Ovo';
+}
+p{
+color: coral;
+}
+
+ul{
+list-style-image: url('pics/pointer-icon.png');
+}
+
+ol{
+list-style-type: upper-roman;
+}
+
+#s a{
+font-family : 'Ovo  ';
+text-decoration : none;
+background-color: rgb(138, 176, 214);
+padding : 5px;
+color:blue;
+}
+#s a:hover{
+background-color: rgb(96, 59, 59);
+color : #ffffff;
+}

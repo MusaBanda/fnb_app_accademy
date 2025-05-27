@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>contact</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+   </div >
+        <h2>Contact Us</h2>
+        <div id="form">
+        <p>If you have any questions or comments, please reach out to us!</p>
+        <form action="submit_contact.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    </body>
+</html>
