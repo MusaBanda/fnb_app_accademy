@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+            app academy
+        </title>
+        <link rel="stylesheets" href="style.css">
+    </head>
+    <body id="function">
+       <h1 onclick="innerHTML='change'">hello world</h1>
+       <h2 onclick="if(this.innerHTML == 'JavaScript'){this.innerHTML = 'i like it'}">JavaScript</h2>
+
+       <h2 id="change"></h2>
+        <script>
+            function changeText(){
+                if(document.getElementById("change").innerHTML == "JavaScript"){
+                document.getElementById("change").innerHTML = "is awesome";
+                }else{
+                document.getElementById("change").innerHTML = "JavaScript"
+                }
+            }
+        </script>
+
+        <h1 id="heading" onclick="changeText()">JavaScript</h1>
+
+        <script>
+            function changeText(){
+        if(document.getElementById("heading").innerHTML == "JavaScript"){
+            document.getElementById("heading").innerHTML = "is awesome";
+        }else{
+            document.getElementById("heading").innerHTML = "JavaScript"
+        }
+        }
+        </script>
+
+        <p id="addition"></p>
+
+        <script>
+            addNumbers(10, 7)
+            function addNumbers(num1, num2){
+                document.getElementById("addition").innerHTML = num1 + num2;    
+        }           
+        </script>
+
+        <script>
+            var someVariable = "hello world";
+            someFunction();
+            function someFunction(){
+                document.getElementById("addition").innerHTML = someVariable;
+            }
+        </script>
+    </body>
+</html>

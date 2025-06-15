@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            app academy
+        </title>
+        <link rel="stylesheets" href="style.css">
+    </head>
+    <body>
+       <p id="no"></p>
+       <p id="yes"></p>
+        <script>
+        var Password = "12345";
+        var database = "1245";
+
+        if(Password == database){
+            document.getElementById("yes").innerHTML = ("Correct password");
+        }else{
+            document.getElementById("no").innerHTML = ("Incorrect password. Try again");
+        }
+
+        </script>
+    </body>
+</html>

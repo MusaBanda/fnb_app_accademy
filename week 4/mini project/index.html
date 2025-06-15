@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>app academy</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form>
+            <label for="usernameInput">Username:</label><input type="text" id="usernameInput"/><br/>
+            <label for="passwordInput">Password:</label><input type="password" id="passwordInput"/><br/>
+            <p id="message"></p>
+            <br/>
+            <a href="#" onclick="verifyUser()">Login</a>
+        </form>
+        <script>
+            function verifyUser(){
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+            checkUserCreds(username, password);
+        }
+            function checkUserCreds(username, password) {
+            var systemUsername = "Musa";
+            var systemPassword = "12345";
+            if(username == systemUsername && password == systemPassword){
+                document.getElementById("message").innerHTML = "Correct. Logging you in...";
+            } else {
+                document.getElementById("message").innerHTML = "Username or password are incorrect";
+            }
+        }       
+        </script>
+    </body>
+</html>
