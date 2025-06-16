@@ -1,0 +1,40 @@
+table{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(223, 224, 224);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+td#f{
+  background-color: black;
+  color: white;
+}
+
+td{
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2em;
+}
+td#d{
+  background-color: rgb(158, 157, 157);
+  color: white;
+}
+
+input{
+  width: 98%;
+  height: 80%;
+  background-color: rgb(219, 216, 216);
+  color: black;
+  text-size-adjust: 500%;
+}
+
+td:hover, td#f:hover{
+  background-color: rgb(73, 61, 180);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: translateY(2px);
+}
