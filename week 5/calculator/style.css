@@ -38,3 +38,10 @@ td:hover, td#f:hover{
   transition: background-color 0.3s ease;
   transform: translateY(2px);
 }
+
+td:active, td#f:active, td#d:active {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: translateY(2px);
+}

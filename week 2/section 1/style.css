@@ -25,3 +25,37 @@ color:blue;
 background-color: rgb(96, 59, 59);
 color : #ffffff;
 }
+
+div#b{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div#img{
+    grid-row: 3;
+}
+img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+div#links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    gap: 70px;
+    padding: 10px;
+    color: black;
+}
+
+body#b{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
