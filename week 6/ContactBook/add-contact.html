@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="add">
+   <br/>
+   <form id="editform">
+
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" placeholder="First Name">
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" placeholder="Last Name">
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" placeholder="Phone">
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Email">
+        <label for="avatar">Avatar:</label>
+        <input type="file" name="avatar">
+<div id="add buttons">
+<button id="submitform">Save Contact</button>
+<button id="homelink">home</button>
+</div>
+    </form>
+    <br/>
+    
+    <script src="config.js"></script>
+    <script>
+        document.getElementById('submitform').addEventListener('click', submitform);
+        document.getElementById('homelink').addEventListener('click', homelink);
+
+        function submitform(e){
+            e.preventDefault();
+
+            const form = new FormData(document.getElementById('editform'));
+            form.append('apiKey', apiKey);
+
+            fetch(rootPath + 'controller/insert-contact/', {
+                method: 'POST',
+                headers: {'Accept': 'application/json, *.*'},
+                body: form
+            })
+            .then(function(response) {
+                return response.text();
+            })
+            .then(function(data) {
+                if (data == '1') {
+                    alert('Contact added successfully');
+                    homelink();
+                }else {
+                    alert('Error adding contact: ' + data);
+                    homelink();
+                }
+            })
+        }
+
+        function homelink() {
+            window.open('index.html', '_self');
+        }
+    </script>
+</body>
+</html>

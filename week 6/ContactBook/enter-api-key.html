@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>API Key</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>please enter your API key</div>
+   <form>
+    <input type="text" id="apiKeyInput" placeholder="API Key">
+    <button id="saveApiKey">Save API Key</button>
+   </form>
+
+   <script>
+    let rootPath = 'https://mysite.itvarsity.org/api/ContactBook/';
+         document.getElementById('saveApiKey').addEventListener('click', setApiKey);
+              
+    function setApiKey(e) {
+        e.preventDefault();
+
+        apiKey = document.getElementById('apiKeyInput').value;
+        fetch(rootPath + 'controller/api-key/?apiKey=' + apiKey,)
+        .then(function(response){
+            return response.text();
+        })
+        .then(function(data) {
+           if (data === '1') {
+                localStorage.setItem('apiKey', apiKey);
+                window.open(rootPath + 'index.html', '_self');
+           } else {
+                alert(Data + 'Invalid API Key');
+           }
+        })
+    }
+   </script>
+</body>
+</html>

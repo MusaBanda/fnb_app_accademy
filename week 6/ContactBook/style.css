@@ -1,0 +1,104 @@
+body {
+    background-color: #000000;  
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+/* === INDEX PAGE === */
+td {
+    border-top: 1px solid #000000  !important;
+    padding: 5px;
+    
+}
+
+tr {
+    padding: 5px;  
+    
+}
+
+div table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15%;
+    font-size: 2vh;
+    background-color: #5a5959;
+    color: white;
+}
+
+
+img {
+    border-radius: 50%;
+    width: 7vh;
+    height: 7vh;
+}
+
+h5 {
+    text-align: left;
+}
+
+#container {
+    position: fixed;
+    top: 0  !important;
+    width: 100%  !important;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #000000;   
+}
+#container button {
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 20vh;
+    height: 6vh;
+    font-size: 2vh;
+}
+#container button:hover {
+    background-color: #5a5959;
+    color: white;
+    translate: 1px 1px;
+}
+
+/* === ADD-CONTACT PAGE === */
+
+#editform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    padding: 20px;
+    gap: 10px;
+    border: white 1px solid;
+    width: 50%;
+} 
+
+label {
+    font-size: 2vh;
+    color: white;
+}
+#add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#add button {
+    width: 20vh;
+    height: 6vh;
+    font-size: 2vh;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+#add button:hover {
+    background-color: #5a5959;
+    color: white;
+    translate: 1px 1px;
+}

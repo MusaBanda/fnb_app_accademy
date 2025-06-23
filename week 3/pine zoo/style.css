@@ -96,6 +96,9 @@ padding: 1px;
 min-height: 10vh;
 font-size: 2vh;
 }
+a.info-box:hover{
+translate: 0 2px;
+}
 
 .info-box img{
 height: 8vh;
