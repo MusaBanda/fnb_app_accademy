@@ -1,0 +1,42 @@
+body {
+    background-color: #11001F;  
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+#editform{
+    display: flex;
+    flex-direction: column;
+}
+#addform input{
+    height: 2vh;
+    font-size: 2vh;
+    padding: 5px;
+    
+}
+button {
+    width: 8vh;
+    height: 4vh;
+    font-size: 2vh;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #6a00ff;
+    color: #ffffff;
+}
+
+#avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    border-radius: 2%;
+    width: 70vh;
+    height: 30vh;
+}

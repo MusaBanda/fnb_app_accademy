@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Edit Contact</title>
+    <link rel="stylesheet" href="edit.css">
 </head>
 <body onload="getContact()">
     <div id="avatar"></div>
@@ -18,13 +19,15 @@
         <label for="phone">Phone:</label>
         <input type="tel" name="phone" id="phone" readonly>
 
-        <label for="avatar" id="avatarlable" hidden>Profile:</label>
-        <input type="file" name="avatar" id="avatar" hidden>
+        <label for="avatar" id="avatarlable" style="display:none;">Profile:</label>
+<input type="file" name="avatar" id="avatar" style="display:none;">
+
 
         <br/>
         <button type="submit" id="submitform" hidden>Save</button>
     </form>
 
+    
     <button id="homelink">Home</button>
     <button id="aditcontact">Edit</button>
     <button id="deletcontact">Delete</button>
@@ -47,7 +50,7 @@
         }
 
         function displayOutput(data) {
-            const avatarImg = `<img src="${rootPath}controller/uploads/${data[0].avatar}" width="300vh" />`;
+            const avatarImg = `<img src="${rootPath}controller/uploads/${data[0].avatar}" />`;
             document.getElementById("avatar").innerHTML = avatarImg;
             document.getElementById("firstname").value = data[0].firstname;
             document.getElementById("lastname").value = data[0].lastname;
@@ -61,8 +64,8 @@
             document.getElementById("email").readOnly = false;
             document.getElementById("phone").readOnly = false;
             document.getElementById("avatar").hidden = false;
-            document.getElementById("avatarlable").hidden = false;
-            document.getElementById("submitform").hidden = false;
+            document.getElementById("avatarlable").style = false;
+            document.getElementById("submitform").style = false;
         }
 
         function submitform() {
