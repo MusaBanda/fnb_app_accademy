@@ -1,5 +1,5 @@
 body {
-    background-color: #000000;  
+    background-color: #11001F;  
 }
 
 html {
@@ -15,8 +15,11 @@ td {
 }
 
 tr {
-    padding: 5px;  
-    
+    padding: 5px;   
+}
+tr:hover {
+    translate: 2px 2px;
+    cursor: pointer;
 }
 
 div table {
@@ -24,7 +27,6 @@ div table {
     width: 100%;
     text-align: center;
     justify-content: center;
-    margin-top: 15%;
     font-size: 2vh;
     background-color: #5a5959;
     color: white;
@@ -43,27 +45,28 @@ h5 {
 
 #container {
     position: fixed;
-    top: 0  !important;
+    bottom: 0  !important;
     width: 100%  !important;
     align-items: center;
     justify-content: center;
     display: flex;
-    gap: 10px;
+    gap: 30%;
     padding: 10px;
-    background-color: #000000;   
+    background-color: #11001F; 
+     border-top: 1px solid #f3f3f3   !important;
 }
-#container button {
+#container img {
+
     padding: 10px 20px;
-    cursor: pointer;
-    width: 20vh;
+    width: 6vh;
     height: 6vh;
-    font-size: 2vh;
 }
-#container button:hover {
-    background-color: #5a5959;
-    color: white;
+#container img:hover {
     translate: 1px 1px;
+    cursor: pointer;
 }
+
+
 
 /* === ADD-CONTACT PAGE === */
 

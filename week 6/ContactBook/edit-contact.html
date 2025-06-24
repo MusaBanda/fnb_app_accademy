@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Contact</title>
+</head>
+<body onload="getContact()">
+    <div id="avatar"></div>
+    <form id="editform">
+        <label for="firstname">Firstname:</label>
+        <input type="text" name="firstname" id="firstname" readonly>
+
+        <label for="lastname">Lastname:</label>
+        <input type="text" name="lastname" id="lastname" readonly>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" readonly>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone" readonly>
+
+        <label for="avatar" id="avatarlable" hidden>Profile:</label>
+        <input type="file" name="avatar" id="avatar" hidden>
+
+        <br/>
+        <button type="submit" id="submitform" hidden>Save</button>
+    </form>
+
+    <button id="homelink">Home</button>
+    <button id="aditcontact">Edit</button>
+    <button id="deletcontact">Delete</button>
+
+    <script src="config.js"></script>
+    <script>
+        const id = getid();
+        console.log("id: " + id);
+
+        function getid() {
+            const url = window.location.href;
+            const pos = url.search("=");
+            return url.slice(pos + 1);
+        }
+
+        function getContact() {
+            fetch(rootPath + 'controller/get-contacts/?id=' + id)
+                .then(response => response.json())
+                .then(data => displayOutput(data));
+        }
+
+        function displayOutput(data) {
+            const avatarImg = `<img src="${rootPath}controller/uploads/${data[0].avatar}" width="300vh" />`;
+            document.getElementById("avatar").innerHTML = avatarImg;
+            document.getElementById("firstname").value = data[0].firstname;
+            document.getElementById("lastname").value = data[0].lastname;
+            document.getElementById("email").value = data[0].email;
+            document.getElementById("phone").value = data[0].phone;
+        }
+
+        function editContact() {
+            document.getElementById("firstname").readOnly = false;
+            document.getElementById("lastname").readOnly = false;
+            document.getElementById("email").readOnly = false;
+            document.getElementById("phone").readOnly = false;
+            document.getElementById("avatar").hidden = false;
+            document.getElementById("avatarlable").hidden = false;
+            document.getElementById("submitform").hidden = false;
+        }
+
+        function submitform() {
+            const form = new FormData(document.getElementById('editform'));
+            form.append('apiKey', apiKey);
+            form.append('id', id);
+
+            fetch(rootPath + 'controller/edit-contact/', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json, *.*' },
+                body: form
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data === '1') {
+                    alert('Contact edited successfully');
+                } else {
+                    alert('Error editing contact: ' + data);
+                }
+                window.open('index.html', '_self');
+            });
+        }
+
+        
+        function deletcontact(){
+            var confirmDelete = confirm("Are you sure you want to delete this contact?");
+            if (confirmDelete) {
+                fetch(rootPath + 'controller/delete-contact/?id=' + id,)
+                .then(response => response.text())
+                .then(data => {
+                    if (data === '1') {
+                        alert('Contact deleted successfully');
+                        window.open('index.html', '_self');
+                    } else {
+                        alert('Error deleting contact: ' + data);
+                    }
+                });
+            }
+        }
+
+        function homelink() {
+            window.open('index.html', '_self');
+        }
+
+        document.getElementById("homelink").addEventListener("click", homelink);
+        document.getElementById("aditcontact").addEventListener("click", editContact);
+        document.getElementById("deletcontact").addEventListener("click", deletcontact);
+        document.getElementById("submitform").addEventListener("click", function(event) {
+            event.preventDefault();
+            submitform();
+        });
+        
+    </script>
+</body>
+</html>
