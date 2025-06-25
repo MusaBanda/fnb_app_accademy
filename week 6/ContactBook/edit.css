@@ -11,9 +11,10 @@ html {
 #editform{
     display: flex;
     flex-direction: column;
+    font-size: 2vh;
 }
-#addform input{
-    height: 2vh;
+input{
+    height: 4vh;
     font-size: 2vh;
     padding: 5px;
     
