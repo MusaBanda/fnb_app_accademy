@@ -1,0 +1,12 @@
+d = [
+    {'name': 'Alice', 'age': 30, 'city': 'New York'},
+    {'name': 'Bob', 'age': 25, 'city': 'Los Angeles'},
+    {'name': 'Charlie', 'age': 35, 'city': 'Chicago'},
+]
+
+print(d[0]['name'])  
+print(d[1]['age'])  
+print(d[2]['city'])
+
+d.append({'name': 'David', 'age': 28, 'city': 'Miami'})
+print(d) 
