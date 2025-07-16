@@ -21,6 +21,9 @@ form {
     border-radius: 1rem;
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.1); 
+    height: 25vh;
+    width: 30vh;
+    font-size: 2vh;
 }
 
 a {
@@ -36,4 +39,14 @@ a:is(:hover) {
     color: black;
     transition: 1s;
     transform: translateY(-5px);
+}
+a:active {
+    background-color: black;
+    color: white;
+    transform: scale(0.95);
+}
+
+input{
+   height: 3vh;
+   width: 20vh;
 }

@@ -50,4 +50,14 @@ body {
 #form {
  text-align: center;
  align-items: center;
+
+}
+
+input{
+  height: 5vh;
+  width: 50vh;
+}
+textarea{
+  height: 20vh;
+  width: 50vh;
 }

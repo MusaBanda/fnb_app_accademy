@@ -5,40 +5,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table border="1">
+   <div id="c">
+    <table borde="1"> 
         <tr>
-            <td id="d" colspan="4">
+            <td colspan="4">
                 <input type="text" id="inputbox" value="0" readonly>
             </td>
         </tr>
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
+            <td id="num">7</td>
+            <td id="num">8</td>
+            <td id="num">9</td>
             <td id="f">*</td>
         </tr>
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td id="num">4</td>
+            <td id="num">5</td>
+            <td id="num">6</td>
             <td id="f">-</td>
         </tr>
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td id="num">1</td>
+            <td id="num">2</td>
+            <td id="num">3</td>
             <td id="f">+</td>
         </tr>
         <tr>
-            <td >0</td>
+            <td id="num">0</td>
             <td id="f" colspan="2">AC</td>
             <td id="f">/</td>
         </tr>
         <tr>
-            <td id="d" colspan="4">=</td>
+            <td id="f" colspan="4">=</td>
         </tr>
     </table>
-
+</div>
     <script>
         const buttons = document.querySelectorAll("td");
         const inputBox = document.getElementById("inputbox");

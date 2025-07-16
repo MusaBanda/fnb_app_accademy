@@ -10,6 +10,7 @@ html {
 
 #editform{
     display: flex;
+    align-items: center;
     flex-direction: column;
     font-size: 2vh;
 }
@@ -17,9 +18,12 @@ input{
     height: 4vh;
     font-size: 2vh;
     padding: 5px;
-    
+    text-align: center;
+    width: 80%;
+    background-color: beige;
 }
 button {
+    border-radius: 10px;
     width: 8vh;
     height: 4vh;
     font-size: 2vh;
